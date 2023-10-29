@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+s img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+:root {
+  --background-color: #000;
+  --color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  grid-template-rows: auto auto;
+  width: min(100% - 40px, 1000px);
+  margin-inline: auto;
+}
+@media (min-width: 56.25em) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.grid__main, .grid__sidebar {
+  padding: 2rem;
+}
+.grid__main {
+  background-color: hsl(240, 99%, 33%);
+}
+@media (min-width: 43.74em) {
+  .grid__main {
+    background-color: hsl(120, 99%, 33%);
+  }
+}
+@media (min-width: 56.25em) {
+  .grid__main {
+    background-color: hsl(39, 99%, 33%);
+  }
+}
+.grid__sidebar {
+  background-color: hsl(300, 100%, 30%);
+}
+@media (max-width: 56.25em) {
+  .grid__sidebar {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+@use '../util/' as u;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-template-rows: auto auto;
+    width: min(100% - 40px, 1000px);
+    margin-inline: auto;
+
+    @include u.breakpoint(large) {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    &__main, &__sidebar {
+        padding: 2rem;
+    }
+
+    &__main {
+        background-color: hsl(240, 99%, 33%);
+
+        @include u.breakpoint(medium) {
+            background-color: hsl(120, 99%, 33%);
+        };
+
+        @include u.breakpoint(large) {
+            background-color: hsl(39, 99%, 33%);
+        };
+    }
+
+    &__sidebar{
+        background-color: hsl(300, 100%, 30%);
+
+        @include u.breakpoint-down(medium) {
+            text-align: center;
+        }
+    }
+}
